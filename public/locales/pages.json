@@ -1,0 +1,31 @@
+{
+  "pages": {
+    "en": {
+      "Alle Mitarbeiter haben diese Woche Schichten.": "All employees have shifts this week.",
+      "Diese Woche ohne Schicht": "Without Shift This Week",
+      "Einplanen": "Schedule",
+      "Ersten Mitarbeiter anlegen": "Add First Employee",
+      "Ganztags": "All Day",
+      "Heute 1 Schicht belegt — {0} im Dienst.": "Today 1 shift assigned — {0} on duty.",
+      "Heute im Dienst": "On Duty Today",
+      "Heute noch keine Schichten geplant.": "No shifts scheduled for today.",
+      "Heute noch niemand eingeplant.": "Nobody scheduled for today.",
+      "Heute {0} Schichten — {1} im Dienst.": "Today {0} shifts — {1} on duty.",
+      "Jetzt einplanen": "Schedule Now",
+      "Keine Schicht diese Woche": "No Shift This Week",
+      "Lege zuerst Mitarbeiter an, dann kannst du Schichten planen.": "Add employees first, then you can schedule shifts.",
+      "Mitarbeiter": "Employee",
+      "Mitarbeiter gesamt": "Total Employees",
+      "Noch keine Mitarbeiter": "No Employees Yet",
+      "Noch keine Mitarbeiter angelegt.": "No employees created yet.",
+      "Ohne Schicht heute": "No Shift Today",
+      "Schicht": "Shift",
+      "Schicht planen": "Schedule Shift",
+      "Schichten diese Woche": "Shifts This Week",
+      "Unbekannt": "Unknown",
+      "{0} — heute noch nicht eingeplant.": "{0} — not yet scheduled today.",
+      "{0} — verschoben auf {1}": "{0} — rescheduled to {1}"
+    }
+  },
+  "v": 1
+}

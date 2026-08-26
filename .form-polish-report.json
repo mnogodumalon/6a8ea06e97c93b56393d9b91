@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Mitarbeiter": {
+      "placeholders_set": 8,
+      "defaults_keys": ["beschaeftigungsart"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten (Name, Kontakt, Abteilung, Position), keine Numerik oder Datums-Beziehungen. Beschäftigungsart hat ein logisches Default (Vollzeit)."
+    },
+    "Schichten": {
+      "placeholders_set": 6,
+      "defaults_keys": [],
+      "computed_keys": [],
+      "reason": "Stammdaten-Katalog für Schichttypen. Startzeit/Endzeit sind Text-Eingaben, nicht für Arithmetik geeignet. Keine applookup zu Preis-Feldern."
+    },
+    "Schichtplan": {
+      "placeholders_set": 5,
+      "defaults_keys": ["datum"],
+      "computed_keys": [],
+      "reason": "Verknüpfung (Mitarbeiter × Schicht × Datum), keine Number-Felder. Applookup-Targets (Mitarbeiter, Schichten) haben keine Preis-/Satz-Spalten. Datum ist Erfassungsdatum, keine Start-/End-Spanne für Laufzeit-Berechnung."
+    }
+  }
+}
