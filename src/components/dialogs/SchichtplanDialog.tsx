@@ -364,7 +364,7 @@ export function SchichtplanDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="datum">{fieldLabel('schichtplan', 'datum')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <DatePicker
           id="datum"
-          placeholder="Wann arbeitet der Mitarbeiter?"
+          placeholder=""
           mode="date"
           value={fields.datum ?? null}
           onChange={v => setFields(f => ({ ...f, datum: v ?? undefined }))}
@@ -380,7 +380,7 @@ export function SchichtplanDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="mitarbeiter">{fieldLabel('schichtplan', 'mitarbeiter')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="mitarbeiter"
-          placeholder="Welcher Mitarbeiter?"
+          placeholder=""
           items={mitarbeiterListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.vorname ?? r.record_id),
@@ -400,7 +400,7 @@ export function SchichtplanDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="schicht">{fieldLabel('schichtplan', 'schicht')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Combobox
           id="schicht"
-          placeholder="Welche Schicht?"
+          placeholder=""
           items={schichtenListAll.map(r => ({
             id: r.record_id,
             label: String(r.fields.schicht_name ?? r.record_id),
@@ -420,7 +420,7 @@ export function SchichtplanDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="arbeitsbereich">{fieldLabel('schichtplan', 'arbeitsbereich')}</Label>
         <Input
           id="arbeitsbereich"
-          placeholder="z. B. Produktion A"
+          placeholder=""
           value={fields.arbeitsbereich ?? ''}
           onChange={e => setFields(f => ({ ...f, arbeitsbereich: e.target.value }))}
         />
@@ -431,7 +431,7 @@ export function SchichtplanDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="anmerkungen">{fieldLabel('schichtplan', 'anmerkungen')}</Label>
         <Textarea
           id="anmerkungen"
-          placeholder="Bereichsspezifische Notizen, Vertretung, Besonderheiten..."
+          placeholder=""
           value={fields.anmerkungen ?? ''}
           onChange={e => setFields(f => ({ ...f, anmerkungen: e.target.value }))}
           rows={3}

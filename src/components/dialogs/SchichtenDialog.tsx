@@ -308,7 +308,7 @@ export function SchichtenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="schicht_name">{fieldLabel('schichten', 'schicht_name')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="schicht_name"
-          placeholder="z. B. Frühschicht"
+          placeholder=""
           value={fields.schicht_name ?? ''}
           onChange={e => setFields(f => ({ ...f, schicht_name: e.target.value }))}
           required
@@ -323,7 +323,7 @@ export function SchichtenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="kuerzel">{fieldLabel('schichten', 'kuerzel')}</Label>
         <Input
           id="kuerzel"
-          placeholder="z. B. FS"
+          placeholder=""
           value={fields.kuerzel ?? ''}
           onChange={e => setFields(f => ({ ...f, kuerzel: e.target.value }))}
         />
@@ -334,7 +334,7 @@ export function SchichtenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="startzeit">{fieldLabel('schichten', 'startzeit')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="startzeit"
-          placeholder="z. B. 06:00"
+          placeholder=""
           value={fields.startzeit ?? ''}
           onChange={e => setFields(f => ({ ...f, startzeit: e.target.value }))}
           required
@@ -349,7 +349,7 @@ export function SchichtenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="endzeit">{fieldLabel('schichten', 'endzeit')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="endzeit"
-          placeholder="z. B. 14:00"
+          placeholder=""
           value={fields.endzeit ?? ''}
           onChange={e => setFields(f => ({ ...f, endzeit: e.target.value }))}
           required
@@ -364,7 +364,7 @@ export function SchichtenDialog({ open, onClose, onSubmit, defaultValues, record
         <Label htmlFor="schicht_beschreibung">{fieldLabel('schichten', 'schicht_beschreibung')}</Label>
         <Textarea
           id="schicht_beschreibung"
-          placeholder="Besonderheiten, Betretungszeiten, Pausen..."
+          placeholder=""
           value={fields.schicht_beschreibung ?? ''}
           onChange={e => setFields(f => ({ ...f, schicht_beschreibung: e.target.value }))}
           rows={3}

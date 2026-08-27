@@ -308,7 +308,7 @@ export function MitarbeiterDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="vorname">{fieldLabel('mitarbeiter', 'vorname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="vorname"
-          placeholder="z. B. Max"
+          placeholder=""
           value={fields.vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, vorname: e.target.value }))}
           required
@@ -323,7 +323,7 @@ export function MitarbeiterDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="nachname">{fieldLabel('mitarbeiter', 'nachname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="nachname"
-          placeholder="z. B. Müller"
+          placeholder=""
           value={fields.nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, nachname: e.target.value }))}
           required
@@ -339,7 +339,7 @@ export function MitarbeiterDialog({ open, onClose, onSubmit, defaultValues, reco
         <Input
           id="email"
           type="email"
-          placeholder="z. B. max@firma.de"
+          placeholder=""
           value={fields.email ?? ''}
           onChange={e => setFields(f => ({ ...f, email: e.target.value }))}
         />
@@ -360,7 +360,7 @@ export function MitarbeiterDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="abteilung">{fieldLabel('mitarbeiter', 'abteilung')}</Label>
         <Input
           id="abteilung"
-          placeholder="z. B. Produktion"
+          placeholder=""
           value={fields.abteilung ?? ''}
           onChange={e => setFields(f => ({ ...f, abteilung: e.target.value }))}
         />
@@ -371,7 +371,7 @@ export function MitarbeiterDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="position">{fieldLabel('mitarbeiter', 'position')}</Label>
         <Input
           id="position"
-          placeholder="z. B. Schichtleiter"
+          placeholder=""
           value={fields.position ?? ''}
           onChange={e => setFields(f => ({ ...f, position: e.target.value }))}
         />
@@ -441,7 +441,7 @@ export function MitarbeiterDialog({ open, onClose, onSubmit, defaultValues, reco
         <Label htmlFor="notizen">{fieldLabel('mitarbeiter', 'notizen')}</Label>
         <Textarea
           id="notizen"
-          placeholder="Besonderheiten, Qualifikationen, Verfügbarkeit..."
+          placeholder=""
           value={fields.notizen ?? ''}
           onChange={e => setFields(f => ({ ...f, notizen: e.target.value }))}
           rows={3}

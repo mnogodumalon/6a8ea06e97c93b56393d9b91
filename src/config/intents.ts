@@ -43,8 +43,8 @@ export interface IntentLink {
 
 export const INTENTS: IntentLink[] = [
   // <custom:intents>
-  { path: '/intents/schicht-einplanen', label: { de: 'Schicht einplanen', en: 'Schedule shift' }, icon: IconCalendarPlus, description: 'Mitarbeiter, Schicht und Datum in drei Schritten einplanen' },
-  { path: '/intents/schicht-tauschen', label: { de: 'Schicht tauschen', en: 'Swap shift' }, icon: IconArrowsExchange, description: 'Einen bestehenden Schichteintrag auf anderen Mitarbeiter oder andere Schicht umbuchen' },
+  { path: '/intents/schicht-einplanen', label: { de: 'Schicht einplanen', en: 'Schedule shift' }, icon: IconCalendarPlus, description: { de: 'Mitarbeiter, Schicht und Datum in drei Schritten einplanen', en: 'Schedule employee, shift, and date in three steps' } },
+  { path: '/intents/schicht-tauschen', label: { de: 'Schicht tauschen', en: 'Swap shift' }, icon: IconArrowsExchange, description: { de: 'Einen bestehenden Schichteintrag auf anderen Mitarbeiter oder andere Schicht umbuchen', en: 'Rebook an existing shift entry to a different employee or shift' } },
   // </custom:intents>
 ];
 

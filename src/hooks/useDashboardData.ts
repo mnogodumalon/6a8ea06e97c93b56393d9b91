@@ -79,3 +79,6 @@ export function useDashboardData() {
 
   return { mitarbeiter, setMitarbeiter, schichten, setSchichten, schichtplan, setSchichtplan, loading, error, fetchAll, mitarbeiterMap, schichtenMap };
 }
+
+/** The hook's return — the `data` prop of DashboardOverview in the Ready-Wrapper form. */
+export type DashboardData = ReturnType<typeof useDashboardData>;

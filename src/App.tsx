@@ -7,14 +7,7 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import AdminPage from '@/pages/AdminPage';
 import PublicPagesAdmin from '@/pages/PublicPagesAdmin';
-import MitarbeiterPage from '@/pages/MitarbeiterPage';
-import MitarbeiterDetailPage from '@/pages/MitarbeiterDetailPage';
-import SchichtenPage from '@/pages/SchichtenPage';
-import SchichtenDetailPage from '@/pages/SchichtenDetailPage';
-import SchichtplanPage from '@/pages/SchichtplanPage';
-import SchichtplanDetailPage from '@/pages/SchichtplanDetailPage';
 // <custom:imports>
 const IntentSchichtEinplanenPage = lazy(() => import('@/pages/intents/SchichtEinplanenPage'));
 const IntentSchichtTauschenPage = lazy(() => import('@/pages/intents/SchichtTauschenPage'));
@@ -71,13 +64,6 @@ export default function App() {
               <Route path="public/:slug" element={<Suspense fallback={null}><PublicPage /></Suspense>} />
               <Route element={<Layout />}>
                 <Route index element={<DashboardOverview />} />
-                <Route path="mitarbeiter" element={<MitarbeiterPage />} />
-                <Route path="mitarbeiter/:id" element={<MitarbeiterDetailPage />} />
-                <Route path="schichten" element={<SchichtenPage />} />
-                <Route path="schichten/:id" element={<SchichtenDetailPage />} />
-                <Route path="schichtplan" element={<SchichtplanPage />} />
-                <Route path="schichtplan/:id" element={<SchichtplanDetailPage />} />
-                <Route path="admin" element={<AdminPage />} />
                 <Route path="verwaltung/oeffentliche-seiten" element={<PublicPagesAdmin />} />
                 {/* <custom:routes> */}
                 <Route path="intents/schicht-einplanen" element={<Suspense fallback={null}><IntentSchichtEinplanenPage /></Suspense>} />

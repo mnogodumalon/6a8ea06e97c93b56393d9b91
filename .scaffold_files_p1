@@ -650,15 +650,10 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import AdminPage from '@/pages/AdminPage';
 import PublicPagesAdmin from '@/pages/PublicPagesAdmin';
-import MitarbeiterPage from '@/pages/MitarbeiterPage';
-import MitarbeiterDetailPage from '@/pages/MitarbeiterDetailPage';
-import SchichtenPage from '@/pages/SchichtenPage';
-import SchichtenDetailPage from '@/pages/SchichtenDetailPage';
-import SchichtplanPage from '@/pages/SchichtplanPage';
-import SchichtplanDetailPage from '@/pages/SchichtplanDetailPage';
 // <custom:imports>
+const IntentSchichtEinplanenPage = lazy(() => import('@/pages/intents/SchichtEinplanenPage'));
+const IntentSchichtTauschenPage = lazy(() => import('@/pages/intents/SchichtTauschenPage'));
 // </custom:imports>
 
 // Lazy: public pages live outside <Layout> and only load on /#/public/:slug —
@@ -712,15 +707,10 @@ export default function App() {
               <Route path="public/:slug" element={<Suspense fallback={null}><PublicPage /></Suspense>} />
               <Route element={<Layout />}>
                 <Route index element={<DashboardOverview />} />
-                <Route path="mitarbeiter" element={<MitarbeiterPage />} />
-                <Route path="mitarbeiter/:id" element={<MitarbeiterDetailPage />} />
-                <Route path="schichten" element={<SchichtenPage />} />
-                <Route path="schichten/:id" element={<SchichtenDetailPage />} />
-                <Route path="schichtplan" element={<SchichtplanPage />} />
-                <Route path="schichtplan/:id" element={<SchichtplanDetailPage />} />
-                <Route path="admin" element={<AdminPage />} />
                 <Route path="verwaltung/oeffentliche-seiten" element={<PublicPagesAdmin />} />
                 {/* <custom:routes> */}
+                <Route path="intents/schicht-einplanen" element={<Suspense fallback={null}><IntentSchichtEinplanenPage /></Suspense>} />
+                <Route path="intents/schicht-tauschen" element={<Suspense fallback={null}><IntentSchichtTauschenPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
@@ -868,7 +858,7 @@ export function Layout() {
             </la-nav-section>
           </la-nav-section>
 
-          {/* Aktionen-Sektion (Figma-Muster): alles, was man TUN kann —
+          {/* Produktivitäts-Sektion (Figma-Muster): zusätzliche Funktionen —
               Abläufe und Öffentliche Seiten als aufklappbare Gruppen
               (starten zu), Werkzeuge als schlichter Eintrag (öffnet den
               Werkzeuge-Drawer des Assistenten), dann die Version als
@@ -885,7 +875,7 @@ export function Layout() {
 
           {/* Sticky Footer = dünne Meta-Zeile (Figma-Muster). Relative
               Pfade, damit die Plattform-Seiten auf jedem Host stimmen. */}
-          <div slot="footer" className="flex flex-wrap gap-x-4 gap-y-1 border-t border-sidebar-border py-3 text-sm font-medium text-muted-foreground">
+          <div slot="footer" className="flex flex-wrap justify-center gap-x-4 gap-y-1 border-t border-sidebar-border py-3 text-sm font-medium text-muted-foreground">
             <a href="/impressum.htm" className="hover:text-foreground transition-colors">{t('legal_imprint')}</a>
             <a href="/datenschutz.htm" className="hover:text-foreground transition-colors">{t('legal_privacy')}</a>
             <a href="/apps.htm" className="hover:text-foreground transition-colors">LivingApps</a>
@@ -1005,6 +995,9 @@ export function useDashboardData() {
 
   return { mitarbeiter, setMitarbeiter, schichten, setSchichten, schichtplan, setSchichtplan, loading, error, fetchAll, mitarbeiterMap, schichtenMap };
 }
+
+/** The hook's return — the `data` prop of DashboardOverview in the Ready-Wrapper form. */
+export type DashboardData = ReturnType<typeof useDashboardData>;
 ```
 
 ## src/lib/enrich.ts

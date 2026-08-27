@@ -3,7 +3,6 @@
 These files are pre-generated. Do NOT Read the pre-generated source files — their contracts and contents are in THIS file and in the key-file parts listed below.
 Key file contents (types/app.ts, livingAppsService.ts, App.tsx, Layout.tsx, hooks/libs) are in .scaffold_files_p1, .scaffold_files_p2 — Read each of them with ONE Read right after this file.
 EXCEPTION: DashboardOverview.tsx is NOT included here. You MUST Read it with the Read tool before Write.
-AdminPage.tsx is pre-generated but NOT inlined — Read it only if you need to reference its structure.
 Your job: Analyze data (1-2 sentences), Read then Write DashboardOverview.tsx (once), build.
 Large custom UI blocks (a self-contained concept of ~60+ lines no widget covers) are NOT written inline: dictate the props interface in a brief, dispatch build_components (ONE call, all components), write the Overview against your own interface, and call await_components before any gate or build — see CLAUDE.md Step 1b.
 Loading/error UIs are pre-generated in src/components/DashboardStates.tsx — keep the DashboardSkeleton/DashboardError import and the two early-returns; never re-implement them.
@@ -15,7 +14,7 @@ index.css is pre-generated with the shared design system. Do NOT edit it.
 src/config/ai-features.ts is editable — set AI_PHOTO_SCAN['Entity'] = true to enable photo scan in dialogs.
 NEVER use Bash cat/echo/heredoc for file operations — always use Read/Write/Edit tools.
 
-Generated 106 scaffold files:
+Generated 90 scaffold files:
   - src/App.tsx
   - src/i18n/index.ts
   - src/i18n/common.ts
@@ -25,7 +24,6 @@ Generated 106 scaffold files:
   - src/types/la-widgets.d.ts
   - src/components/PageShell.tsx
   - src/components/ActionsSidebar.tsx
-  - src/pages/DashboardOverview.tsx
   - src/components/DashboardStates.tsx
   - src/components/ConfirmDialog.tsx
   - src/components/StatCard.tsx
@@ -49,9 +47,6 @@ Generated 106 scaffold files:
   - src/components/DatePicker.tsx
   - .placeholder-tasks.json
   - src/config/form-enhancements/types.ts
-  - src/config/form-enhancements/Mitarbeiter.ts
-  - src/config/form-enhancements/Schichten.ts
-  - src/config/form-enhancements/Schichtplan.ts
   - scripts/parse-formulas.mjs
   - scripts/apply-placeholders.mjs
   - src/config/intents.ts
@@ -72,7 +67,6 @@ Generated 106 scaffold files:
   - src/lib/ai.ts
   - src/components/VersionCheck.tsx
   - src/components/AttachmentsSection.tsx
-  - src/config/ai-features.ts
   - src/lib/formatters.ts
   - src/lib/polish.ts
   - src/hooks/useDashboardData.ts
@@ -103,25 +97,14 @@ Generated 106 scaffold files:
   - src/components/widgets/ChartWidget.tsx
   - src/components/widgets/ChartWidget.example.tsx
   - tsconfig.app.json
-  - src/pages/MitarbeiterPage.tsx
   - src/components/dialogs/MitarbeiterDialog.tsx
-  - src/components/dialogs/MitarbeiterViewDialog.tsx
-  - src/pages/MitarbeiterDetailPage.tsx
   - src/components/details/MitarbeiterDetails.tsx
-  - src/pages/SchichtenPage.tsx
   - src/components/dialogs/SchichtenDialog.tsx
-  - src/components/dialogs/SchichtenViewDialog.tsx
-  - src/pages/SchichtenDetailPage.tsx
   - src/components/details/SchichtenDetails.tsx
-  - src/pages/SchichtplanPage.tsx
   - src/components/dialogs/SchichtplanDialog.tsx
-  - src/components/dialogs/SchichtplanViewDialog.tsx
-  - src/pages/SchichtplanDetailPage.tsx
   - src/components/details/SchichtplanDetails.tsx
   - src/components/EntityCrud.tsx
   - src/types/leaflet-plugins.d.ts
-  - src/pages/AdminPage.tsx
-  - src/components/dialogs/BulkEditDialog.tsx
 
 ## The enrich() output contract
 
